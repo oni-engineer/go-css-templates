@@ -28,7 +28,6 @@ func mainHandler(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"templates/layout/base.html",
 		"templates/main.html",
-		// "templates/css/main.css",
 	}
 	templateParser, err := template.ParseFiles(files...)
 	if err != nil {
@@ -80,5 +79,3 @@ func main() {
 		panic(err)
 	}
 }
-
-/// -------------------------------------------------
