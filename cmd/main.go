@@ -55,18 +55,6 @@ func mainHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, res)
 }
 
-type ServeFile struct {
-	ContentType string
-	FileName    string
-}
-
-func newServeFile(contentType, filename string) *ServeFile {
-	return &ServeFile{
-		ContentType: contentType,
-		FileName:    filename,
-	}
-}
-
 func main() {
 	if len(os.Args) == 2 {
 		PORT = ":" + os.Args[1]
