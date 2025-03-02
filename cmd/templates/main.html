@@ -1,0 +1,11 @@
+{{ template "base" . }}
+
+{{ define "title" }} {{ .Title }} {{ end }}
+{{ define "style" }} <link rel="stylesheet" type="text/css" href="css/main.css"> {{ end }}
+
+{{ define "main" }} 
+    <h1 align="center"> {{ .Name }} </h1>
+    {{ range $Item := .Data }}
+        <li> {{ $Item }} </li>
+    {{ end }}
+{{ end }}
